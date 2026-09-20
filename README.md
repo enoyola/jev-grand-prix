@@ -2,7 +2,16 @@
 
 A racing game where TypeSafe's **Jev** drives an F1 car live, and you can race it.
 
+## Setup
+
+You need [uv](https://docs.astral.sh/uv/getting-started/installation/) and a TypeSafe API
+key from [console.typesafe.ai](https://console.typesafe.ai/) (Jev is in early access, so
+you may have to join the waitlist first). uv installs Python and the dependencies itself.
+
 ```bash
+git clone https://github.com/enoyola/jev-grand-prix.git
+cd jev-grand-prix
+echo "TYPESAFE_API_KEY=your_key_here" > .env
 uv run server.py
 ```
 
