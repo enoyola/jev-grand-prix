@@ -1,0 +1,7 @@
+[project]
+name = "jev-grand-prix"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "typesafe-sdk>=0.7.0",
+]

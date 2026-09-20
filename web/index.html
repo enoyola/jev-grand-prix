@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jev Grand Prix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="stage">
+      <canvas id="view"></canvas>
+      <div id="lights" class="lights" hidden><span></span><span></span><span></span><span></span><span></span></div>
+      <div id="banner" class="banner" hidden></div>
+      <p class="hint">Arrow keys drive your car · <kbd>C</kbd> switches camera</p>
+    </section>
+
+    <aside class="panel">
+      <header>
+        <h1>JEV <em>GRAND PRIX</em></h1>
+        <p class="sub">Jev picks the racing line and the pedals. Code turns the wheel.</p>
+      </header>
+
+      <div class="controls">
+        <button id="start" class="primary">Start race</button>
+        <button id="pause">Pause</button>
+        <label>Laps
+          <select id="laps"><option>1</option><option>3</option><option>5</option><option selected>8</option><option>10</option></select>
+        </label>
+        <label>Game speed
+          <select id="speed">
+            <option value="1" selected>100%</option><option value="0.75">75%</option><option value="0.5">50%</option>
+          </select>
+        </label>
+        <label class="check"><input type="checkbox" id="player"> Race Jev yourself</label>
+      </div>
+
+      <div id="timing" class="timing"></div>
+
+      <h2>Jev's decision <span id="conf" class="muted"></span></h2>
+      <div class="group-label">Racing line</div>
+      <div id="lineBars" class="bars"></div>
+      <div class="group-label">Pedals</div>
+      <div id="pedalBars" class="bars"></div>
+      <div class="worry"><span>Trouble?</span><i><b id="worry"></b></i><em id="worryVal">–</em></div>
+
+      <h2>Race engineer <span class="muted">code remembers · Jev plans</span></h2>
+      <div id="engineer" class="engineer"></div>
+
+      <h2>What Jev sees</h2>
+      <dl id="sees" class="sees"><dt>…</dt><dd>Start a race to see Jev's view of the track.</dd></dl>
+
+      <h2>Stats</h2>
+      <dl id="stats" class="stats"></dl>
+      <p id="error" class="error" hidden></p>
+    </aside>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
