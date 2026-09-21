@@ -194,3 +194,18 @@ button.primary { background: var(--red); border-color: var(--red); font-weight: 
 .engineer .dots i.off, .legend i.off { box-shadow: 0 0 0 2px #ffffff; }
 .legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 6px 0 0; font-size: 11px; color: var(--muted); }
 .legend i { display: inline-block; width: 8px; height: 8px; margin-right: 4px; border-radius: 50%; background: #1c2531; }
+
+/* Film mode (?film=1): no controls, bigger numbers, for recording a vertical clip. */
+.film .controls, .film .hint, .film .sub, .film .legend { display: none; }
+.film .panel { padding: 12px 14px 18px; }
+.film h1 { font-size: 26px; }
+.film h2 { margin: 12px 0 6px; font-size: 12px; }
+.film .timing table { font-size: 15px; }
+.film .laplist { font-size: 14px; }
+.film .bars .bar, .film .worry { grid-template-columns: 120px 1fr 44px; font-size: 14px; margin: 3px 0; }
+.film .bars i, .film .worry i { height: 12px; }
+.film .engineer table { font-size: 13px; }
+.film .sees { font-size: 14px; grid-template-columns: 104px 1fr; }
+@media (max-width: 900px) {
+  .film .layout { grid-template-rows: 58vh auto; }
+}

@@ -18,6 +18,12 @@ uv run server.py
 Then open **http://localhost:8765** and press **Start race**. Tick *Race Jev yourself* to
 drive your own car with the arrow keys (`C` switches the camera). The default 8 laps lets you watch the race engineer find the limit of every corner.
 
+### Recording a clip
+
+`http://localhost:8765/?film=1&laps=3&auto=1` hides the controls, enlarges the readouts and
+starts the race by itself. Make the browser window tall and narrow (about 430x930) and the
+layout stacks into a phone-shaped view: track on top, Jev's decisions underneath.
+
 ## How it works: Jev is the brain, code is the body
 
 ```

@@ -806,4 +806,13 @@ function frame(now) {
 setState("idle");
 resetEngineer();
 renderEngineer();
+
+// Recording helpers: ?film=1 hides the controls and enlarges the readouts (good for a
+// vertical phone video), ?laps=3 sets the race length, ?auto=1 starts it by itself.
+const params = new URLSearchParams(location.search);
+if (params.has("laps")) $("laps").value = params.get("laps");
+if (params.has("speed")) $("speed").value = params.get("speed");
+if (params.has("film")) document.body.classList.add("film");
+if (params.has("auto")) setTimeout(startRace, 1200);
+
 requestAnimationFrame(frame);
